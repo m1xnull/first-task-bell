@@ -42,7 +42,7 @@ values ('1', 'Саратов, пер. Мирный, 17', '79321234243', 'true'),
        ('2', 'Саратов, Мирный переулок, 11/13', '79831235467', 'false'),
        ('3', 'г. Москва, ул. Образцова, д.38', '78934358965', 'true');
 
-insert into User (office_id, document_id, citizenship_id, position_id, first_name, middle_name, second_name, phone,
+insert into User (office_id, document_id, citizenship_id, position_id, first_name, second_name, last_name, phone,
                   is_identified)
 values ('1', '1', '1', '1', 'Александр', 'Алексеевич', 'Попов', '89271231343', 'true'),
        ('1', '2', '2', '1', 'Сергей', 'Николаевич', 'Пашкин', '89122323431', 'true'),
