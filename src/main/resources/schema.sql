@@ -91,8 +91,8 @@ create table User
     citizenship_id int,
     position_id    int         not null,
     first_name     varchar(30) not null,
-    middle_name    varchar(30),
     second_name    varchar(30),
+    last_name      varchar(30),
     phone          varchar(20),
     is_identified  bool default false,
     constraint User_pk
