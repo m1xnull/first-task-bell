@@ -51,6 +51,10 @@ create unique index Organization_kpp_uindex
     on Organization (kpp);
 create unique index Organization_phone_uindex
     on Organization (phone);
+create index Organization_name_index
+    on Organization(name);
+create index Organization_is_active_index
+    on Organization(is_active);
 
 create table Office
 (
@@ -68,6 +72,8 @@ create unique index Office_address_uindex
     on Office (address);
 create unique index Office_phone_uindex
     on Office (phone);
+create index Office_is_active_index
+    on Office (is_active);
 
 create table User
 (
@@ -91,6 +97,12 @@ create table User
 );
 create unique index User_phone_uindex
     on User (phone);
+create index User_first_name_index
+    on user (first_name);
+create index User_last_name_index
+    on user (last_name);
+create index User_first_name_and_last_name_index
+    on user (first_name, last_name);
 
 create table Document
 (
@@ -104,7 +116,6 @@ create table Document
         foreign key (document_type_id) references Document_type (id),
     constraint Document_User_id_fk
         foreign key (id) references User (id),
-
 );
 create unique index Document_document_type_id_number_uindex
     on Document (document_type_id, number);
