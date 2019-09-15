@@ -34,20 +34,6 @@ create unique index Document_type_code_uindex
 create unique index Document_type_name_uindex
     on Document_type (name);
 
-create table Document
-(
-    id               int auto_increment,
-    document_type_id int,
-    number           int,
-    date             date,
-    constraint Document_pk
-        primary key (id),
-    constraint Document_Document_type_id_fk
-        foreign key (document_type_id) references Document_type (id)
-);
-create unique index Document_document_type_id_number_uindex
-    on Document (document_type_id, number);
-
 create table Organization
 (
     id        int auto_increment,
@@ -87,7 +73,6 @@ create table User
 (
     id             int auto_increment,
     office_id      int         not null,
-    document_id    int,
     citizenship_id int,
     position_id    int         not null,
     first_name     varchar(30) not null,
@@ -99,9 +84,6 @@ create table User
         primary key (id),
     constraint User_Citizenship_id_fk
         foreign key (citizenship_id) references Citizenship (id),
-    constraint User_Document_id_fk
-        foreign key (document_id) references Document (id)
-            on delete cascade,
     constraint User_Office_id_fk
         foreign key (office_id) references Office (id),
     constraint User_Position_id_fk
@@ -109,3 +91,20 @@ create table User
 );
 create unique index User_phone_uindex
     on User (phone);
+
+create table Document
+(
+    id               int,
+    document_type_id int,
+    number           int,
+    date             date,
+    constraint Document_pk
+        primary key (id),
+    constraint Document_Document_type_id_fk
+        foreign key (document_type_id) references Document_type (id),
+    constraint Document_User_id_fk
+        foreign key (id) references User (id),
+
+);
+create unique index Document_document_type_id_number_uindex
+    on Document (document_type_id, number);
