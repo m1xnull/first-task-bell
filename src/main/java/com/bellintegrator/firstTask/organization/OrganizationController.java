@@ -1,6 +1,6 @@
 package com.bellintegrator.firstTask.organization;
 
-import com.bellintegrator.firstTask.DataDto;
+import com.bellintegrator.firstTask.DataWrapper;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +22,6 @@ public class OrganizationController {
     @PostMapping("/list")
     @JsonView(OrganizationView.filter.class)
     public HashMap list(@RequestBody @Valid OrganizationDto organizationDto) {
-        return DataDto.getData(organizationService.filterBy(organizationDto));
+        return DataWrapper.getData(organizationService.filterBy(organizationDto));
     }
 }
