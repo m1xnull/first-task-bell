@@ -2,6 +2,7 @@ create table Position
 (
     id   int auto_increment,
     name varchar(30) not null,
+    version integer not null,
     constraint Position_pk
         primary key (id)
 );
@@ -13,6 +14,7 @@ create table Citizenship
     id   int auto_increment,
     name varchar(50) not null,
     code int         not null,
+    version integer not null,
     constraint Citizenship_pk
         primary key (id)
 );
@@ -26,6 +28,7 @@ create table Document_type
     id   int auto_increment,
     name varchar(30) not null,
     code int         not null,
+    version integer not null,
     constraint Document_type_pk
         primary key (id)
 );
@@ -44,6 +47,7 @@ create table Organization
     address   varchar(60)        not null,
     phone     varchar(20),
     is_active bool default false not null,
+    version integer not null,
     constraint Organization_pk
         primary key (id)
 );
@@ -63,6 +67,7 @@ create table Office
     address         varchar(60),
     phone           varchar(20),
     is_active       bool default false not null,
+    version integer not null,
     constraint Office_pk
         primary key (id),
     constraint Office_Organization_id_fk
@@ -86,6 +91,7 @@ create table User
     last_name      varchar(30),
     phone          varchar(20),
     is_identified  bool default false,
+    version integer not null,
     constraint User_pk
         primary key (id),
     constraint User_Citizenship_id_fk
@@ -110,6 +116,7 @@ create table Document
     document_type_id int,
     number           int,
     date             date,
+    version integer not null,
     constraint Document_pk
         primary key (id),
     constraint Document_Document_type_id_fk

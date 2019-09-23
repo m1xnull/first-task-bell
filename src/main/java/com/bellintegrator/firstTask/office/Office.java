@@ -11,6 +11,9 @@ public class Office {
     @Column(name = "Id")
     private Long id;
 
+    @Version
+    private Integer version;
+
     @ManyToOne
     @JoinColumn(name = "organization_id")
     private Organization organization;

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c170127f-2d82-4825-ad4b-3bc123798cae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/FirstTaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/FirstTaskApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/citizenship/Citizenship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/citizenship/Citizenship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/office/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/office/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bellintegrator/firstTask/organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +83,8 @@
       <workItem from="1568535594429" duration="666000" />
       <workItem from="1568539846464" duration="1855000" />
       <workItem from="1568541729502" duration="318000" />
-      <workItem from="1568542070304" duration="2405000" />
+      <workItem from="1568542070304" duration="3945000" />
+      <workItem from="1569215617606" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bugs">
       <created>1568536230652</created>

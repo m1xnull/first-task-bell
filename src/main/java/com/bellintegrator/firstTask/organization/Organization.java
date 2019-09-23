@@ -14,6 +14,9 @@ public class Organization {
     @JsonView(OrganizationView.filter.class)
     private Long id;
 
+    @Version
+    private Integer version;
+
     @OneToMany(mappedBy = "organization")
     private Set<Office> offices;
 

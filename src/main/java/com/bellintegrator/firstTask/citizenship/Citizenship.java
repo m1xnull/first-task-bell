@@ -10,6 +10,9 @@ public class Citizenship {
     @Column(name = "Id")
     private Long id;
 
+    @Version
+    private Integer version;
+
     @Column(length = 50, nullable = false)
     @JsonView(Views.UI.class)
     private String name;
